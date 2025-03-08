@@ -18,8 +18,9 @@ function generateTable(json) {
     }
 
     // Vælg de ønskede felter til tabellen
-    const selectedFields = ["id", "albumName", "artistName", "productionYear"];  // Skift felterne her
+    const selectedFields = ["albumName", "artistName", "productionYear", "favorites"];
 
+    
 // Lav tabelhoved (kolonner)
 let headerRow = "<tr>";
 

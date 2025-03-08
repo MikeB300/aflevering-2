@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="dk">
+    <link href="styles.css" rel="stylesheet">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSON i en tabel</title>
-    <style>
-        table {
-            width: 80%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1.5px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
 </head>
 <body>
 
     <h2>Liste over albums</h2>
+    <button onclick="gem()">Gem album liste</button>
+    <button onclick="vis()">Vis album liste</button>
+
+    <script>
+        function gem() {
+            document.getElementById("jsonTable").hidden = true;
+        };
+        function vis() {
+            document.getElementById("jsonTable").hidden = false;
+        }
+    </script>
+
     <table id="jsonTable"></table>
 
-    <!-- Include the external JavaScript file -->
-    <script src="jsonloader.js"></script>
+    <!-- Javascript -->
+    <script src="jsonloader.js"></script> <!-- Indlæser json-filen og laver html tabelen-->
 
 </body>
 </html>
