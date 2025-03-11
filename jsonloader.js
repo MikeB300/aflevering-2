@@ -4,7 +4,7 @@ async function loadJSON() {
         const jsonData = await response.json();  // Konverter JSON til et objekt
         generateTable(jsonData);  // Generer tabellen med de ønskede felter
     } catch (error) {
-        console.error("Fejl i at indlæse JSON filen:", error);  // Hvis noget går galt, logges en fejl
+        console.error("Fejl i at indlæse JSON filen:", error);  // Hvis noget hvis det går galt, logges en fejl
     }
 }
 
@@ -13,15 +13,15 @@ function generateTable(json) {
 
     // Tjek at data'en er der
     if (!json.length) {
-        table.innerHTML = "<tr><td colspan='100%'>Ingen data tilgængeligt</td></tr>";
+        table.innerHTML = "<tr><td colspan='100%'>Ingen data er tilgængeligt</td></tr>";
         return;
     }
 
-    // Vælg de ønskede felter til tabellen
+    // Vælg de ønskede felter til tabellen her!
     const selectedFields = ["albumName", "artistName", "productionYear", "favorites"];
 
     
-// Lav tabelhoved (kolonner)
+// Lav tabelhovedet
 let headerRow = "<tr>";
 
 // Loop gennem selectedFields og lav hver <th> cell
